@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내 취향 음악 플레이어</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body id="music_tag_box">
+    <h1 id="music_tag_title">음악 태그 목록</h1>
+    <div id="music-tag-list">아직 설정된 태그가 없어요! (최대 5개)</div>
+    <form id="music_tag_form">
+      <input id="music_tag_input" required type="text" maxlength="14" autocomplete="off" placeholder="태그를 입력 해주세요!" />
+      <button id="music_tag_add_btn" type="submit">태그 추가</button>
+    </form>
+    <button id="music_play_btn" style="display: none;"></button>
+    <script src="popup.js"></script>
+  </body>
+</html>

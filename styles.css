@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#music_tag_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 400px;
+  min-height: 150px;
+  padding: 20px;
+}
+
+#music_tag_title {
+  font-size: 20px;
+}
+
+#music-tag-list {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.tag-item {
+  background-color: #f0f0f0;
+  color: black;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  overflow: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.delete-btn {
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(240, 103, 103);
+  color: white;
+  cursor: pointer;
+}
+
+#music_tag_form {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+#music_tag_input {
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid skyblue;
+  outline: none;
+  padding: 5px;
+}
+
+#music_tag_add_btn {
+  border-radius: 10px;
+  border: none;
+  outline:none;
+  background-color: skyblue;
+  padding: 5px;
+}
+
+#music_play_btn {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 5px;
+  background-color: skyblue;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

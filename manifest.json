@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Konomi Music Player",
+  "version": "1.0",
+  "description": "Save and play your favorite music with tags",
+  "permissions": ["storage", "activeTab", "background"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/konomi-music-icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://www.googleapis.com/*",
+    "https://www.youtube.com/*"
+  ],
+  "content_security_policy": {
+    "script-src": ["'self'", "https://www.youtube.com"],
+    "object-src": ["'self'"],
+    "frame-src": ["https://www.youtube.com"]
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "musicPlayer.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
+

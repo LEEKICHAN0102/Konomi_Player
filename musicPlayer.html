@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konomi Music Player</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      margin: 0;
+    }
+    .player {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    video {
+      display: none;
+    }
+    audio {
+      width: 100%;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="player">
+    <video id="videoPlayer" controls>
+      <source id="videoSource" type="video/mp4">
+    </video>
+    <audio id="audioPlayer" controls>
+      <source id="audioSource" type="audio/mp3">
+    </audio>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const videoUrl = urlParams.get('videoUrl');
+    
+    if (videoUrl) {
+      const videoPlayer = document.getElementById('videoPlayer');
+      const videoSource = document.getElementById('videoSource');
+      const audioPlayer = document.getElementById('audioPlayer');
+      const audioSource = document.getElementById('audioSource');
+
+      videoSource.src = videoUrl;
+      audioSource.src = `https://www.youtube.com/watch?v=${new URL(videoUrl).searchParams.get('v')}`;
+
+      videoPlayer.load();
+      audioPlayer.load();
+      audioPlayer.play();
+    }
+  </script>
+</body>
+</html>
